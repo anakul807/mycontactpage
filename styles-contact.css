@@ -148,7 +148,7 @@ body {
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	background-color: #efefe7;
+	background-image: url("images/tan_picnic_bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -160,12 +160,14 @@ body {
 	min-width: 300px;
 	padding: 2%;
 	margin: 100px auto;
-	background: rgba(239, 239, 231, 1);
+	background: rgba(239, 239, 231, 0.75);
 	/*last number is opacity (decimal form, NOT percent)*/
+	border-radius: 25px;
 	text-align: center;
 	border-color: #4c5388;
 
 	/* fade in transition */
+	
 	animation: fadeIn 3s;
 }
 
@@ -200,7 +202,7 @@ h2 {
 	line-height: 1.4;
 	color: #7a8da8;
 	padding: 0px 0px;
-	margin: 15px auto 15px auto;
+	margin: 20px auto 15px auto; /* order is top, right, bottom, left */
 }
 
 h3 {
@@ -211,7 +213,7 @@ h3 {
 	line-height: 1.4;
 	color: #4c5388;
 	padding: 10px 0px;
-	margin: 15px auto 15px auto;
+	margin: 30px auto 15px auto;
 	text-align: left;
 }
 
@@ -228,10 +230,10 @@ p {
 /* body text fade-in */ 
 .fade-in {
     opacity: 0;
-    animation: fadeInAnimation 2s ease-in-out forwards;
+    animation: bodyFadeIn 2s ease-in-out forwards;
 }
 
-@keyframes fadeInAnimation {
+@keyframes bodyFadeIn {
 	0% { opacity: 0; }
 	100% { opacity: 1; }
 }
@@ -242,10 +244,9 @@ nav {
 	font-family: area-normal, sans-serif;
 	font-size: 1.2em;
 	width: 60%; /* responsive */
-	margin: 0px auto;
-	text-align: right;
+	margin: auto auto;
+	text-align: left;
 	margin-top: 2em;
-	background-color: #efefe7;
     position: fixed;
     top: 0;
     z-index: 1000; 
@@ -260,8 +261,8 @@ nav a {
 	padding: 10px;
 }
 
-a {
-	color: #444;
+a { /* links */
+	color: #4c5388;
 	text-decoration: none;
 	font-weight: bold;
 }
